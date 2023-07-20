@@ -9,7 +9,7 @@ User = get_user_model()
 
 
 class Quiz(models.Model):
-    author = models.ForeignKey(User, on_delete=models.DO_NOTHING)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField( _("Quiz Title") ,max_length=255, unique=True, default=_("New Quiz"))
     created_at = models.DateTimeField(auto_now_add=True)
     slug = AutoSlugField(populate_from='title', unique=True)
