@@ -19,7 +19,7 @@ env = environ.Env(DEBUG=(bool, False))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-environ.Env.read_env(ROOT_DIR / ".env")
+environ.Env.read_env(BASE_DIR / ".env")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -28,8 +28,8 @@ environ.Env.read_env(ROOT_DIR / ".env")
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-'DEBUG = env("DEBUG")'
-DEBUG = False
+DEBUG = env("DEBUG")
+# DEBUG = False
 
 # ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 ALLOWED_HOSTS = ['*']
