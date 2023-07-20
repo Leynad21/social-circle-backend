@@ -9,6 +9,7 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'Social Circle < tom.smith.4273@gmail.com>'
 DOMAIN = env("DOMAIN")
+SITE_NAME = "Social Circle"
 
 DATABASES = {
     "default": dj_database_url.parse(env("DATABASE_URL"))
